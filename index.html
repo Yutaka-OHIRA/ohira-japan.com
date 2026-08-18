@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OHIRA</title>
+    <meta
+      name="description"
+      content="OHIRA company website with product showcase and slideshow."
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Noto+Sans+JP:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar" aria-label="Main header">
+        <div class="brand" aria-label="OHIRA logo">
+          <a href="#home"><img src="logo.png" alt="OHIRA logo" /></a>
+        </div>
+
+        <div class="header-actions" aria-label="Header actions">
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+            aria-controls="navDrawer"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- ナビゲーションメニュー (ドロワー) -->
+      <div class="nav-overlay" id="navOverlay" hidden></div>
+      <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation" aria-hidden="true">
+        <div class="nav-drawer-header">
+          <button class="menu-close" id="menuClose" aria-label="メニューを閉じる">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">ホーム</a></li>
+          <li><a href="#about" class="nav-link">OHIRAについて</a></li>
+          <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <!-- ヒーロー / ホーム -->
+        <section id="home" class="hero" aria-label="Product slideshow">
+          <div class="slideshow" aria-live="polite">
+            <img class="slide active" src="demo1.png" alt="Product showcase 1" />
+            <img class="slide" src="demo2.png" alt="Product showcase 2" />
+          </div>
+          <div class="slideshow-controls" aria-label="スライドショー操作">
+            <button class="slideshow-arrow prev" id="slidePrev" aria-label="前の画像へ" type="button">
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 1L1 7L7 13"/>
+              </svg>
+            </button>
+            <div class="slideshow-dots" id="slideshowDots" role="tablist" aria-label="スライド選択"></div>
+            <button class="slideshow-arrow next" id="slideNext" aria-label="次の画像へ" type="button">
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 1L7 7L1 13"/>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" class="products" aria-label="Products section">
+          <div class="products-header">
+            <h1 class="products-title">PRODUCTS</h1>
+          </div>
+          <div class="products-container">
+            <div class="product-grid">
+              <article class="product-card">
+                <div class="product-img-wrapper">
+                  <img src="demo1.png" alt="プロダクト 01" />
+                </div>
+                <div class="product-info">
+                  <h2 class="product-name">COLLECTION 01</h2>
+                  <p class="product-desc">洗練されたデザインと機能美を追求したプロダクトライン。</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-img-wrapper">
+                  <img src="demo2.png" alt="プロダクト 02" />
+                </div>
+                <div class="product-info">
+                  <h2 class="product-name">COLLECTION 02</h2>
+                  <p class="product-desc">上質な素材と確かな職人技術によって生み出される佇まい。</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- OHIRAについて -->
+        <section id="about" class="section about-section" aria-label="About OHIRA">
+          <div class="section-container">
+            <h2 class="section-title">OHIRAについて</h2>
+            <div class="about-content">
+              <p class="lead-text">
+                伝統と革新の調和。時を超えて愛されるものづくりを目指しています。
+              </p>
+              <p>
+                私たちOHIRAは、厳選された素材と独自の美意識を軸に、日々の暮らしに静かな豊かさをもたらす製品をお届けしています。品質に対する妥協なき追求と、細部に宿る精緻なこだわりを大切にしています。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="section contact-section" aria-label="Contact">
+          <div class="section-container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-content">
+              <p>製品やサービスに関するご質問・ご相談は、以下よりお気軽にお問い合わせください。</p>
+              <div class="contact-box">
+                <p class="contact-email"><strong>EMAIL:</strong> info@ohira-japan.com</p>
+                <p class="contact-hours"><strong>営業時間:</strong> 平日 10:00 - 18:00 (土日祝除く)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <p class="copyright">&copy; OHIRA. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
